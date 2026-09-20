@@ -42,6 +42,7 @@
 <li><a href="#de-verantwortlich">1. Verantwortlicher</a></li>
 <li><a href="#de-grundsatz">2. Grundsatz: Verarbeitung auf dem Gerät</a></li>
 <li><a href="#de-bilder">3. Bilder</a></li>
+<li><a href="#de-dokumente">3a. Dokumente (PDF)</a></li>
 <li><a href="#de-links">4. Links</a></li>
 <li><a href="#de-identitaet">5. Meine Identität</a></li>
 <li><a href="#de-einstellungen">6. Einstellungen</a></li>
@@ -71,7 +72,7 @@ E-Mail: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
 <article id="de-grundsatz" class="content-card">
 <h3>2. Grundsatz: Verarbeitung auf dem Gerät</h3>
 <p>ScrubSend ist ein Datenschutzwerkzeug für Android. Es prüft von Ihnen ausgewählte Fotos, Screenshots und Links auf private Informationen und gibt eine bereinigte Kopie weiter. Die App benötigt kein Benutzerkonto, enthält keine Werbung und bindet keine Werbe-, Analyse-, Tracking- oder Crash-Reporting-SDKs ein. Sie hat keinen eigenen Server.</p>
-<p>Die App fordert keine Internet-Berechtigung an und kann deshalb von sich aus keine Daten aus dem Gerät übertragen. Die einzige von der App erklärte Berechtigung ist <code>com.android.vending.BILLING</code> für den optionalen Kauf über Google Play (Abschnitt 7). Sie fordert keinen Zugriff auf Ihre Fotos, Dateien, Kontakte, Ihren Standort oder Ihr Mikrofon an: Sie wählen die Bilder selbst über die Android-Fotoauswahl oder das Teilen-Menü aus – einzeln oder mehrere auf einmal –, und die App sieht nur genau diese Dateien.</p>
+<p>Die App fordert keine Internet-Berechtigung an und kann deshalb von sich aus keine Daten aus dem Gerät übertragen. Die einzige von der App erklärte Berechtigung ist <code>com.android.vending.BILLING</code> für den optionalen Kauf über Google Play (Abschnitt 7). Sie fordert keinen Zugriff auf Ihre Fotos, Dateien, Kontakte, Ihren Standort oder Ihr Mikrofon an: Sie wählen Bilder und Dokumente selbst über die Android-Fotoauswahl, die Android-Dateiauswahl oder das Teilen-Menü aus – einzeln oder mehrere auf einmal –, und die App sieht nur genau diese Dateien.</p>
 <p>Alle in den Abschnitten 3 bis 6 beschriebenen Verarbeitungen finden ausschließlich auf Ihrem Gerät unter Ihrer Kontrolle statt. Wir haben keinen Zugriff auf diese Inhalte und erhalten sie nicht. Die App protokolliert weder Dateinamen noch Metadaten, erkannten Text oder Koordinaten. Soweit eine Verarbeitung überhaupt uns zurechenbar ist, ist die Rechtsgrundlage die Bereitstellung der von Ihnen ausdrücklich angeforderten Funktion, Art. 6 Abs. 1 Buchst. b DSGVO.</p>
 </article>
 
@@ -89,6 +90,13 @@ E-Mail: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
 <p>Die bereinigte Kopie wird aus den Bildpunkten vollständig neu kodiert. Metadaten werden dadurch nicht übernommen; von Ihnen gewählte Bereiche werden in der Kopie unwiderruflich geschwärzt oder verpixelt. Die Kopie liegt unter einem zufälligen Dateinamen im App-eigenen Cache (<code>cache/scrubsend/share</code>) und wird beim Teilen über den Android-Teilen-Dialog mit einem zeitlich begrenzten Leserecht an die von Ihnen ausgewählte App übergeben. ScrubSend wählt keinen Empfänger vor und lädt nichts hoch. Ab der Übergabe verarbeitet die Ziel-App die Kopie nach ihren eigenen Regeln.</p>
 <p>Die Arbeitskopie wird gelöscht, sobald Sie die Bearbeitung beenden. Geteilte Kopien werden beim nächsten Start der App gelöscht, sobald sie älter als etwa sechs Stunden sind; die Frist besteht nur, damit eine Mail- oder Chat-App die Datei noch fertig lesen kann. Das Löschen der App-Daten oder die Deinstallation entfernt alle diese Dateien sofort.</p>
 <p>Bitte beachten Sie: ScrubSend hilft, offensichtliche Risiken zu erkennen. Es kann Text übersehen, den es nicht sauber lesen kann, einen Code, den es nicht dekodieren kann, oder ein Gesicht, das zu klein oder abgewandt ist. Die App behauptet nie, ein Bild sei „sauber“.</p>
+</article>
+
+<article id="de-dokumente" class="content-card">
+<h3>3a. Dokumente (PDF)</h3>
+<p>Mit Pro können Sie ein PDF-Dokument an ScrubSend übergeben (ab Version 0.6.0). Die App legt davon eine private Arbeitskopie im selben Cache-Verzeichnis an und liest daraus zwei Dinge: die Dokumenteigenschaften (Autor, Titel, Thema, Stichwörter, erzeugende Software, Erstellungs- und Änderungsdatum sowie das Vorhandensein eingebetteter XMP-Metadaten), um sie Ihnen anzuzeigen, und jede Seite, die mit dem in Android enthaltenen PDF-Renderer als Bild in den Cache gezeichnet wird. Diese Seitenbilder werden genau wie Bilder geprüft (Abschnitt 3): Texterkennung, Codes, Gesichter und – wenn hinterlegt – der Abgleich mit „Meine Identität“, alles auf dem Gerät. Ein passwortgeschütztes Dokument wird abgelehnt; die App fragt nicht nach Passwörtern. Dokumente mit mehr als 20 Seiten werden abgelehnt.</p>
+<p>Die bereinigte Kopie ist ein <strong>neues PDF, das aus einem Bild jeder Seite besteht</strong>, mit denselben Seitengrößen. Sie wird von der App vollständig neu geschrieben und übernimmt nichts aus der Originaldatei: keinen Text, keine Schriften, keine Links, Formularfelder, Kommentare oder Anhänge und keine Dokumenteigenschaften. Von Ihnen gewählte Bereiche sind in den Seitenbildern unwiderruflich geschwärzt oder verpixelt. Text in der Kopie lässt sich deshalb nicht mehr markieren oder durchsuchen. Vor der Übergabe öffnet die App die Kopie noch einmal und prüft Seitenzahl, Abdeckungen und Aufbau; eine Kopie, die diese Prüfung nicht besteht, wird gelöscht und nicht angeboten. Übergabe, Speicherort und Löschfristen entsprechen Abschnitt 3.</p>
+<p>Ohne Pro werden die Seiten und die Dokumenteigenschaften nur angezeigt; die Seiten werden nicht gelesen, und es wird keine Kopie erstellt.</p>
 </article>
 
 <article id="de-links" class="content-card">
@@ -121,7 +129,7 @@ E-Mail: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
 
 <article id="de-berechtigungen" class="content-card">
 <h3>9. Berechtigungen, Komponenten und Netzwerk</h3>
-<p>Die App erklärt gegenüber Android eine einzige Berechtigung: <code>com.android.vending.BILLING</code>. Sie erklärt insbesondere keine Internet-, Netzwerkstatus-, Foto-, Medien-, Speicher-, Kontakt-, Standort- oder Mikrofon-Berechtigung. Die Android-Fotoauswahl und das Teilen-Menü gewähren Zugriff nur auf die von Ihnen jeweils ausgewählten Dateien.</p>
+<p>Die App erklärt gegenüber Android eine einzige Berechtigung: <code>com.android.vending.BILLING</code>. Sie erklärt insbesondere keine Internet-, Netzwerkstatus-, Foto-, Medien-, Speicher-, Kontakt-, Standort- oder Mikrofon-Berechtigung. Die Android-Fotoauswahl, die Android-Dateiauswahl und das Teilen-Menü gewähren Zugriff nur auf die von Ihnen jeweils ausgewählten Dateien.</p>
 <p>Die Texterkennung (Tesseract), die Gesichtserkennung (LiteRT mit einem MediaPipe-Modell) und die Code-Erkennung (ZXing) sind als Open-Source-Komponenten in der App enthalten und arbeiten ohne Netzwerkverbindung; ihre Modelle liegen in der App und werden nicht nachgeladen. Die App enthält keinen HTTP-Client und kein Analyse- oder Crash-Reporting-SDK. Die Grundfunktionen – Metadaten entfernen, Bereiche von Hand abdecken, Links bereinigen, E-Mail-Adressen und Telefonnummern finden – funktionieren unabhängig von Pro.</p>
 </article>
 
@@ -173,6 +181,7 @@ E-Mail: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
 <li><a href="#en-controller">1. Controller</a></li>
 <li><a href="#en-principle">2. Principle: processing on the device</a></li>
 <li><a href="#en-pictures">3. Pictures</a></li>
+<li><a href="#en-documents">3a. Documents (PDF)</a></li>
 <li><a href="#en-links">4. Links</a></li>
 <li><a href="#en-identity">5. My Identity</a></li>
 <li><a href="#en-settings">6. Settings</a></li>
@@ -202,7 +211,7 @@ Email: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
 <article id="en-principle" class="content-card">
 <h3>2. Principle: processing on the device</h3>
 <p>ScrubSend is a privacy tool for Android. It checks the photos, screenshots and links you select for private information and hands on a cleaned copy. The app requires no account, contains no advertising and embeds no advertising, analytics, tracking or crash-reporting SDKs. It has no server of its own.</p>
-<p>The app does not request the Internet permission and therefore cannot transmit anything off the device by itself. The only permission the app declares is <code>com.android.vending.BILLING</code>, for the optional purchase through Google Play (section 7). It requests no access to your photos, files, contacts, location or microphone: you choose the pictures yourself through the Android photo picker or the share sheet – one at a time or several at once – and the app sees only exactly those files.</p>
+<p>The app does not request the Internet permission and therefore cannot transmit anything off the device by itself. The only permission the app declares is <code>com.android.vending.BILLING</code>, for the optional purchase through Google Play (section 7). It requests no access to your photos, files, contacts, location or microphone: you choose pictures and documents yourself through the Android photo picker, the Android file picker or the share sheet – one at a time or several at once – and the app sees only exactly those files.</p>
 <p>Everything described in sections 3 to 6 happens solely on your device, under your control. We have no access to that content and never receive it. The app logs no file names, metadata, recognised text or coordinates. Where any processing is attributable to us at all, the legal basis is the provision of the feature you expressly requested, Article 6(1)(b) GDPR.</p>
 </article>
 
@@ -220,6 +229,13 @@ Email: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
 <p>The cleaned copy is encoded from scratch from the pixels. Metadata is therefore not carried over; the areas you chose are irreversibly blacked out or pixelated in the copy. The copy sits under a random file name in the app's own cache (<code>cache/scrubsend/share</code>) and, when you share it, is handed through the Android share sheet with a time-limited read grant to the app you select. ScrubSend does not preselect a recipient and uploads nothing. From the hand-off onward, the destination app processes the copy under its own rules.</p>
 <p>The working copy is deleted when you finish editing. Shared copies are deleted at the next start of the app once they are older than about six hours; that period exists only so that a mail or chat app can finish reading the file. Clearing the app's data or uninstalling it removes all of these files immediately.</p>
 <p>Please note: ScrubSend helps you spot obvious risks. It can miss text it cannot read clearly, a code it cannot decode, or a face that is too small or turned away. The app never claims a picture is “clean”.</p>
+</article>
+
+<article id="en-documents" class="content-card">
+<h3>3a. Documents (PDF)</h3>
+<p>With Pro you can hand a PDF document to ScrubSend (from version 0.6.0). The app makes a private working copy of it in the same cache directory and reads two things from it: the document properties (author, title, subject, keywords, producing software, creation and modification dates, and whether embedded XMP metadata is present), in order to show them to you, and every page, which is drawn into the cache as a picture with the PDF renderer built into Android. These page pictures are checked exactly like pictures (section 3): text recognition, codes, faces and — if you have entered any — the comparison with “My Identity”, all on the device. A password-protected document is refused; the app does not ask for passwords. Documents with more than 20 pages are refused.</p>
+<p>The cleaned copy is a <strong>new PDF consisting of a picture of each page</strong>, with the same page sizes. It is written from scratch by the app and carries nothing over from the original file: no text, no fonts, no links, form fields, comments or attachments, and no document properties. The areas you chose are irreversibly blacked out or pixelated in the page pictures. Text in the copy can therefore no longer be selected or searched. Before the hand-off the app opens the copy again and checks the page count, the coverage and the structure; a copy that fails this check is deleted and not offered. Hand-off, storage location and deletion periods are as in section 3.</p>
+<p>Without Pro the pages and the document properties are only shown; the pages are not read and no copy is made.</p>
 </article>
 
 <article id="en-links" class="content-card">
@@ -252,7 +268,7 @@ Email: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
 
 <article id="en-permissions" class="content-card">
 <h3>9. Permissions, components and network access</h3>
-<p>The app declares a single permission to Android: <code>com.android.vending.BILLING</code>. In particular it declares no Internet, network-state, photo, media, storage, contacts, location or microphone permission. The Android photo picker and the share sheet grant access only to the files you selected.</p>
+<p>The app declares a single permission to Android: <code>com.android.vending.BILLING</code>. In particular it declares no Internet, network-state, photo, media, storage, contacts, location or microphone permission. The Android photo picker, the Android file picker and the share sheet grant access only to the files you selected.</p>
 <p>Text recognition (Tesseract), face detection (LiteRT with a MediaPipe model) and code detection (ZXing) are bundled in the app as open-source components and work without a network connection; their models ship inside the app and are never downloaded. The app contains no HTTP client and no analytics or crash-reporting SDK. The core features – metadata removal, covering areas by hand, the link cleaner, email and phone detection – work independently of Pro.</p>
 </article>
 
