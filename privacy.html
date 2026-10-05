@@ -25,7 +25,7 @@
 
 <main id="main" class="page-shell">
 <header class="legal-heading">
-<p class="eyebrow">ScrubSend · Stand / Effective date · 24.09.2026</p>
+<p class="eyebrow">ScrubSend · Stand / Effective date · 05.10.2026</p>
 <h1>Datenschutz­<wbr>erklärung / Privacy notice</h1>
 <p class="lede">Datenschutzerklärung für die Android-App ScrubSend (Paketname <code>de.scrubsend.app</code>) und diese GitHub-Pages-Website. Privacy notice for the ScrubSend Android app (package name <code>de.scrubsend.app</code>) and this GitHub Pages website.</p>
 <nav class="language-jump" aria-label="Sprache / Language">
@@ -82,12 +82,13 @@ E-Mail: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
 <p>Auf dieser Arbeitskopie führt die App folgende Prüfungen durch, alle mit Modellen und Bibliotheken, die in der App selbst enthalten sind und keine Netzwerkverbindung nutzen:</p>
 <ul>
 <li><strong>Metadaten:</strong> Auslesen von Standortdaten (GPS), Kamera- und Gerätedaten, Aufnahmezeit, Autorfeldern und eingebetteten Vorschaubildern, um sie Ihnen anzuzeigen.</li>
-<li><strong>Sichtbarer Text:</strong> Texterkennung (OCR) mit der in der App enthaltenen Tesseract-Engine; Erkennung von E-Mail-Adressen, Telefonnummern, Kontonummern (IBAN) und Kartennummern im erkannten Text.</li>
+<li><strong>Sichtbarer Text:</strong> Texterkennung (OCR) mit der in der App enthaltenen Tesseract-Engine; Erkennung von E-Mail-Adressen, Telefonnummern, Kontonummern (IBAN), Kartennummern und – ab Version 0.8.0 – Postanschriften (eine Straße mit Hausnummer zusammen mit Postleitzahl und Ort) im erkannten Text.</li>
 <li><strong>Codes:</strong> Erkennung von QR-Codes und Barcodes und Auslesen ihres Inhalts, damit Sie sehen, was der Code enthält.</li>
 <li><strong>Gesichter:</strong> Erkennung, <em>wo</em> im Bild sich Gesichter befinden, mit einem in der App enthaltenen Modell. Das Modell liefert ausschließlich Rechtecke mit einem Wert für die Trefferwahrscheinlichkeit. Es werden keine biometrischen Merkmale, Vorlagen oder Vergleichsdaten erzeugt oder gespeichert; die App kann Gesichter nicht identifizieren oder Bilder miteinander vergleichen.</li>
 <li><strong>Abgleich mit „Meine Identität“:</strong> nur, wenn Sie Pro haben und selbst Angaben hinterlegt haben (Abschnitt 5).</li>
 </ul>
 <p>Die bereinigte Kopie wird aus den Bildpunkten vollständig neu kodiert. Metadaten werden dadurch nicht übernommen; von Ihnen gewählte Bereiche werden in der Kopie unwiderruflich geschwärzt oder verpixelt. Die Kopie liegt unter einem zufälligen Dateinamen im App-eigenen Cache (<code>cache/scrubsend/share</code>) und wird beim Teilen über den Android-Teilen-Dialog mit einem zeitlich begrenzten Leserecht an die von Ihnen ausgewählte App übergeben. ScrubSend wählt keinen Empfänger vor und lädt nichts hoch. Ab der Übergabe verarbeitet die Ziel-App die Kopie nach ihren eigenen Regeln.</p>
+<p>Auf Ihren Wunsch („Speichern“, ab Version 0.8.0) schreibt die App dieselbe geprüfte Kopie an einen Ort, den Sie in der Android-Dateiauswahl festlegen: als neue Datei, deren Namen die App mit dem Zeitpunkt des Speicherns vorschlägt und nie mit dem Namen des Originals, oder – bei mehreren Bildern – als neue Dateien in einem von Ihnen gewählten Ordner. ScrubSend erhält dafür nur für diesen Vorgang Zugriff auf genau diese Datei bzw. diesen Ordner, legt dort ausschließlich die neuen Kopien an und liest den Ordner nicht. Die gespeicherte Datei bleibt, wo Sie sie abgelegt haben; die App behält davon keine eigene Kopie. Dasselbe gilt für die Kopie eines PDF-Dokuments (Abschnitt 3a).</p>
 <p>Die Arbeitskopie wird gelöscht, sobald Sie die Bearbeitung beenden. Geteilte Kopien werden beim nächsten Start der App gelöscht, sobald sie älter als etwa sechs Stunden sind; die Frist besteht nur, damit eine Mail- oder Chat-App die Datei noch fertig lesen kann. Das Löschen der App-Daten oder die Deinstallation entfernt alle diese Dateien sofort.</p>
 <p>Bitte beachten Sie: ScrubSend hilft, offensichtliche Risiken zu erkennen. Es kann Text übersehen, den es nicht sauber lesen kann, einen Code, den es nicht dekodieren kann, oder ein Gesicht, das zu klein oder abgewandt ist. Die App behauptet nie, ein Bild sei „sauber“.</p>
 </article>
@@ -101,7 +102,7 @@ E-Mail: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
 
 <article id="de-links" class="content-card">
 <h3>4. Links</h3>
-<p>Wenn Sie Text oder einen Link mit ScrubSend teilen, prüft die App den Text im Arbeitsspeicher auf Tracking-Parameter (etwa UTM-Parameter und Klick-Kennungen) und entfernt sie nach einem in der App enthaltenen Regelwerk. Die App öffnet den Link nicht, ruft die Zielseite nicht auf, löst Kurzlinks nicht auf und schlägt nichts nach. Das Ergebnis wird nur auf Ihre ausdrückliche Aktion in die Zwischenablage kopiert (als sensibel gekennzeichnet, damit Android keine Vorschau anzeigt) oder über den Teilen-Dialog weitergegeben. Der geprüfte Text wird nicht gespeichert.</p>
+<p>Wenn Sie Text oder einen Link mit ScrubSend teilen oder ihn in der App eingeben, prüft die App den Text im Arbeitsspeicher auf Tracking-Parameter (etwa UTM-Parameter und Klick-Kennungen) und entfernt sie nach einem in der App enthaltenen Regelwerk. Die App öffnet den Link nicht, ruft die Zielseite nicht auf, löst Kurzlinks nicht auf und schlägt nichts nach. Das Ergebnis wird nur auf Ihre ausdrückliche Aktion in die Zwischenablage kopiert (als sensibel gekennzeichnet, damit Android keine Vorschau anzeigt) oder über den Teilen-Dialog weitergegeben. Die Zwischenablage liest die App nur, wenn Sie auf „Einfügen“ tippen (ab Version 0.8.0), und dann genau einmal. Der geprüfte Text wird nicht gespeichert.</p>
 </article>
 
 <article id="de-identitaet" class="content-card">
@@ -129,8 +130,9 @@ E-Mail: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
 
 <article id="de-berechtigungen" class="content-card">
 <h3>9. Berechtigungen, Komponenten und Netzwerk</h3>
-<p>Die App erklärt gegenüber Android eine einzige Berechtigung: <code>com.android.vending.BILLING</code>. Sie erklärt insbesondere keine Internet-, Netzwerkstatus-, Foto-, Medien-, Speicher-, Kontakt-, Standort- oder Mikrofon-Berechtigung. Die Android-Fotoauswahl, die Android-Dateiauswahl und das Teilen-Menü gewähren Zugriff nur auf die von Ihnen jeweils ausgewählten Dateien.</p>
-<p>Die Texterkennung (Tesseract), die Gesichtserkennung (LiteRT mit einem MediaPipe-Modell) und die Code-Erkennung (ZXing) sind als Open-Source-Komponenten in der App enthalten und arbeiten ohne Netzwerkverbindung; ihre Modelle liegen in der App und werden nicht nachgeladen. Die App enthält keinen HTTP-Client und kein Analyse- oder Crash-Reporting-SDK. Die Grundfunktionen – Metadaten entfernen, Bereiche von Hand abdecken, Links bereinigen, E-Mail-Adressen und Telefonnummern finden – funktionieren unabhängig von Pro.</p>
+<p>Die App erklärt gegenüber Android eine einzige Berechtigung: <code>com.android.vending.BILLING</code>. Sie erklärt insbesondere keine Internet-, Netzwerkstatus-, Foto-, Medien-, Speicher-, Kontakt-, Standort- oder Mikrofon-Berechtigung. Die Android-Fotoauswahl, die Android-Dateiauswahl und das Teilen-Menü gewähren Zugriff nur auf die von Ihnen jeweils ausgewählten Dateien – beim Speichern auf die eine neue Datei oder den einen Ordner, die Sie dafür wählen.</p>
+<p>„ScrubSend bewerten“ und „ScrubSend weiterempfehlen“ (Einstellungen › Über, ab Version 0.8.0) öffnen nur die Seite der App bei Google Play bzw. das Teilen-Menü mit einem kurzen Text und dem Link zur App. Die App fragt nie von sich aus danach und erfährt nicht, ob Sie bewerten oder etwas senden.</p>
+<p>Die Texterkennung (Tesseract), die Gesichtserkennung (LiteRT mit einem MediaPipe-Modell) und die Code-Erkennung (ZXing) sind als Open-Source-Komponenten in der App enthalten und arbeiten ohne Netzwerkverbindung; ihre Modelle liegen in der App und werden nicht nachgeladen. Die App enthält keinen HTTP-Client und kein Analyse- oder Crash-Reporting-SDK. Die Grundfunktionen – Metadaten entfernen, Bereiche von Hand abdecken, Kopien teilen oder speichern, Links bereinigen, E-Mail-Adressen und Telefonnummern finden – funktionieren unabhängig von Pro.</p>
 </article>
 
 <article id="de-website" class="content-card">
@@ -151,6 +153,7 @@ E-Mail: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
 <p>Empfänger können Google Play im Rahmen eines Pro-Kaufs, die von Ihnen im Android-Teilen-Dialog ausgewählte App für eine bewusst geteilte Kopie oder einen bereinigten Link, GitHub beim Besuch dieser Website sowie beteiligte E-Mail-Dienstleister bei einer Kontaktaufnahme sein. Teilen-Ziele werden allein durch Ihre bewusste Auswahl tätig. Wir verkaufen keine personenbezogenen Daten und geben keine weiter.</p>
 <ul>
 <li>Arbeitskopien von Bildern werden beim Beenden der Bearbeitung gelöscht; geteilte bereinigte Kopien beim nächsten App-Start, sobald sie älter als etwa sechs Stunden sind.</li>
+<li>Gespeicherte Kopien liegen dort, wo Sie sie gespeichert haben, und unterliegen allein Ihrer Verwaltung; die App löscht ihre eigene Zwischenkopie unmittelbar nach dem Speichern.</li>
 <li>Geprüfte Links und Texte werden nicht gespeichert.</li>
 <li>Angaben unter „Meine Identität“ bleiben gespeichert, bis Sie sie in der App löschen.</li>
 <li>Einstellungen und die beiden Ja/Nein-Werte bleiben gespeichert, bis Sie sie ändern; eine Google-Play-Abfrage ohne passenden abgeschlossenen Kauf setzt den Kaufwert zurück.</li>
@@ -221,12 +224,13 @@ Email: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
 <p>On that working copy the app runs the following checks, all with models and libraries contained in the app itself and without any network connection:</p>
 <ul>
 <li><strong>Metadata:</strong> reading location data (GPS), camera and device details, capture time, author fields and embedded previews, in order to show them to you.</li>
-<li><strong>Visible text:</strong> text recognition (OCR) with the Tesseract engine bundled in the app; detection of email addresses, phone numbers, bank account numbers (IBAN) and payment card numbers in the recognised text.</li>
+<li><strong>Visible text:</strong> text recognition (OCR) with the Tesseract engine bundled in the app; detection of email addresses, phone numbers, bank account numbers (IBAN), payment card numbers and – from version 0.8.0 – postal addresses (a street with a house number together with a postal code and place) in the recognised text.</li>
 <li><strong>Codes:</strong> detection of QR codes and barcodes and decoding of their content, so that you can see what a code carries.</li>
 <li><strong>Faces:</strong> detection of <em>where</em> faces are in the picture, with a model bundled in the app. The model returns rectangles with a confidence score only. No biometric features, templates or comparison data are generated or stored; the app cannot identify faces or compare pictures with one another.</li>
 <li><strong>Comparison with “My Identity”:</strong> only if you have Pro and have entered details yourself (section 5).</li>
 </ul>
 <p>The cleaned copy is encoded from scratch from the pixels. Metadata is therefore not carried over; the areas you chose are irreversibly blacked out or pixelated in the copy. The copy sits under a random file name in the app's own cache (<code>cache/scrubsend/share</code>) and, when you share it, is handed through the Android share sheet with a time-limited read grant to the app you select. ScrubSend does not preselect a recipient and uploads nothing. From the hand-off onward, the destination app processes the copy under its own rules.</p>
+<p>If you ask for it (“Save”, from version 0.8.0), the app writes the same verified copy to a place you choose in the Android file picker: as a new file whose name the app suggests from the time of saving, never from the original’s name, or – for several pictures – as new files in a folder you choose. For this, ScrubSend gets access to exactly that file or folder for that one operation only, creates nothing there but the new copies and does not read the folder. The saved file stays where you put it; the app keeps no copy of it. The same applies to the copy of a PDF document (section 3a).</p>
 <p>The working copy is deleted when you finish editing. Shared copies are deleted at the next start of the app once they are older than about six hours; that period exists only so that a mail or chat app can finish reading the file. Clearing the app's data or uninstalling it removes all of these files immediately.</p>
 <p>Please note: ScrubSend helps you spot obvious risks. It can miss text it cannot read clearly, a code it cannot decode, or a face that is too small or turned away. The app never claims a picture is “clean”.</p>
 </article>
@@ -240,7 +244,7 @@ Email: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
 
 <article id="en-links" class="content-card">
 <h3>4. Links</h3>
-<p>When you share text or a link with ScrubSend, the app checks the text in memory for tracking parameters (such as UTM parameters and click identifiers) and removes them according to a ruleset contained in the app. The app does not open the link, does not contact the destination page, does not resolve shortened links and looks nothing up. The result is copied to the clipboard only on your explicit action (marked as sensitive so that Android shows no preview) or handed on through the share sheet. The checked text is not stored.</p>
+<p>When you share text or a link with ScrubSend or enter it in the app, the app checks the text in memory for tracking parameters (such as UTM parameters and click identifiers) and removes them according to a ruleset contained in the app. The app does not open the link, does not contact the destination page, does not resolve shortened links and looks nothing up. The result is copied to the clipboard only on your explicit action (marked as sensitive so that Android shows no preview) or handed on through the share sheet. The app reads the clipboard only when you tap “Paste” (from version 0.8.0), and then exactly once. The checked text is not stored.</p>
 </article>
 
 <article id="en-identity" class="content-card">
@@ -268,8 +272,9 @@ Email: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
 
 <article id="en-permissions" class="content-card">
 <h3>9. Permissions, components and network access</h3>
-<p>The app declares a single permission to Android: <code>com.android.vending.BILLING</code>. In particular it declares no Internet, network-state, photo, media, storage, contacts, location or microphone permission. The Android photo picker, the Android file picker and the share sheet grant access only to the files you selected.</p>
-<p>Text recognition (Tesseract), face detection (LiteRT with a MediaPipe model) and code detection (ZXing) are bundled in the app as open-source components and work without a network connection; their models ship inside the app and are never downloaded. The app contains no HTTP client and no analytics or crash-reporting SDK. The core features – metadata removal, covering areas by hand, the link cleaner, email and phone detection – work independently of Pro.</p>
+<p>The app declares a single permission to Android: <code>com.android.vending.BILLING</code>. In particular it declares no Internet, network-state, photo, media, storage, contacts, location or microphone permission. The Android photo picker, the Android file picker and the share sheet grant access only to the files you selected – when saving, to the one new file or the one folder you choose for it.</p>
+<p>“Rate ScrubSend” and “Recommend ScrubSend” (Settings › About, from version 0.8.0) only open the app’s page on Google Play or the share sheet with a short text and the link to the app. The app never asks for either on its own and does not learn whether you rate it or send anything.</p>
+<p>Text recognition (Tesseract), face detection (LiteRT with a MediaPipe model) and code detection (ZXing) are bundled in the app as open-source components and work without a network connection; their models ship inside the app and are never downloaded. The app contains no HTTP client and no analytics or crash-reporting SDK. The core features – metadata removal, covering areas by hand, sharing or saving copies, the link cleaner, email and phone detection – work independently of Pro.</p>
 </article>
 
 <article id="en-website" class="content-card">
@@ -290,6 +295,7 @@ Email: <a href="mailto:info@alpha02.de">info@alpha02.de</a>
 <p>Recipients may include Google Play in the course of a Pro purchase, the app you select in the Android share sheet for a deliberately shared copy or cleaned link, GitHub when you visit this website, and the email services involved when you contact us. Share destinations act only following your deliberate selection. We do not sell personal data and do not pass it on.</p>
 <ul>
 <li>Working copies of pictures are deleted when you finish editing; shared cleaned copies at the next app start once they are older than about six hours.</li>
+<li>Saved copies stay where you saved them and are yours alone to manage; the app deletes its own intermediate copy right after saving.</li>
 <li>Checked links and texts are not stored.</li>
 <li>Details under “My Identity” remain stored until you delete them in the app.</li>
 <li>Settings and the two yes/no values remain until you change them; a Google Play query without a matching completed purchase resets the purchase value.</li>
